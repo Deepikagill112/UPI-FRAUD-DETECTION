@@ -12,9 +12,10 @@ def leading():
 
 @app.route("/predict", methods=["POST"])
 def predict():
-    # yaha prediction logic hoga
+    # prediction logic 
     result = "Transaction is Safe"
     return render_template("result.html", prediction_text=result)
 
 if __name__ == "__main__":
+
     app.run(debug=True)
