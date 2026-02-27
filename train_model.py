@@ -15,4 +15,5 @@ model.fit(X, y)
 # Save as model.pkl in the same folder as app.py
 pickle.dump(model, open('model.pkl', 'wb'))
 
-print("✅ model.pkl created successfully")
+
+print(" model.pkl created successfully")
