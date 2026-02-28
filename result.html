@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .safe {
+            color: green;
+        }
+
+        .unsafe {
+            color: red;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    {% if "NOT" in prediction_text %}
+        <h2 class="unsafe">{{ prediction_text }}</h2>
+    {% else %}
+        <h2 class="safe">{{ prediction_text }}</h2>
+    {% endif %}
+
+    <a href="/">← Try Another Transaction</a>
+</div>
+
+</body>
+</html>
